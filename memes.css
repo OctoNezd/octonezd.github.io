@@ -1,0 +1,14 @@
+.egg {
+	font-family: 'Comic Sans MS' !important;
+	background-color: red;
+    animation-name: danktrips;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.releasedadoggo {
+	display: block !important;
+}
+@keyframes danktrips {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
