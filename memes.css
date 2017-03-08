@@ -1,6 +1,7 @@
 .egg {
 	font-family: 'Comic Sans MS' !important;
-	background-color: red;
+}
+.dankcolors {
     animation-name: danktrips;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
