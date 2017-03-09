@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="OctoNezd's home page">
@@ -15,6 +16,9 @@
         document.querySelector(".site-wrapper").classList.add("dankcolors")
         alert('You found easter egg!');
       }
+    </script>
+    <script>
+      new WOW().init();
     </script>
     <link href="css/cover.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -49,10 +53,10 @@
         animation-iteration-count: infinite;
       }
       @keyframes doge {
-          0%   {left:-20%; top:0px;}
-          25%  {left:80%; top:0px;}
-          50%  {left:80%; top:80%;}
-          75%  {left:0px; top:80%;}
+          0%   {left:-20%; top:0px;transform: rotate(45deg);}
+          25%  {left:80%; top:0px;transform: rotate(90deg);}
+          50%  {left:80%; top:80%;transform: scaleX(-1) rotate(45deg);}
+          75%  {left:0px; top:80%;transform: scaleX(-1) rotate(-90deg);}
           100% {left:0px; top:0px;}
       }
     </style>
@@ -94,11 +98,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
-    <script>
-      new WOW().init();
-    </script>
   </body>
 </html>
