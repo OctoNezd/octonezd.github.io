@@ -8,7 +8,6 @@
     <meta name="description" content="OctoNezd's home page">
     <meta name="author" content="OctoNezd">
     <title>OctoNezd's home page</title>
-    <script src="js/wow.min.js"></script>
     <script type="text/javascript">
       function easteregg() {
         document.querySelector(".mainthing").classList.add("egg")
@@ -17,15 +16,13 @@
         alert('You found easter egg!');
       }
     </script>
-    <script>
-      new WOW().init();
-    </script>
     <link href="css/cover.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="memes.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style type="text/css">
+      html, body {margin: 0; height: 100%; overflow: hidden}
       .fa {
         color: black !important;
         width: 60px;
@@ -60,6 +57,11 @@
           100% {left:0px; top:0px;}
       }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </head>
   <div class="doggo">
   <img src="http://i.imgur.com/MrxY7vu.png">
@@ -69,21 +71,21 @@
       <div class="site-wrapper-inner">
         <div class="cover-container" style="color: #fff">
           <div class="inner cover">
-            <h1 class="cover-heading">OctoNezd</h1>
-            <hr>
-            <p class="lead wow bounceInUp">
-              <a class="link btn btn-secondary" href="http://t.me/octonezd"><i class="fa fa-3x fa-telegram fa-fw" aria-hidden="true"></i></a>
-              <a class="link btn btn-secondary" href="http://github.com/octonezd"><i class="fa fa-3x fa-github fa-fw" aria-hidden="true"></i></a>
+            <h1 class="cover-heading wow fadeInDown">OctoNezd</h1>
+            <hr class="wow slideInLeft">
+            <p class="lead">
+              <a class="link btn btn-secondary wow slideInLeft" href="http://t.me/octonezd"><i class="fa fa-3x fa-telegram fa-fw" aria-hidden="true"></i></a>
+              <a class="link btn btn-secondary wow slideInRight" href="http://github.com/octonezd"><i class="fa fa-3x fa-github fa-fw" aria-hidden="true"></i></a>
             </p>
-            <hr>
+            <hr class="wow slideInRight">
             <p class="lead">
             Best things which I made:<br>
-            <a href="https://ntrdb.octonezd.pw" class="btn">NTRDB</a>
-            <a href="https://github.com/OctoNezd/ASFWeb" class="btn">ASFWeb</a>
-            <a href="https://github.com/OctoNezd/Octeon" class="btn">Octeon</a>
+            <a href="https://ntrdb.octonezd.pw" class="btn wow slideInLeft">NTRDB</a>
+            <a href="https://github.com/OctoNezd/ASFWeb" class="btn wow slideInUp">ASFWeb</a>
+            <a href="https://github.com/OctoNezd/Octeon" class="btn wow slideInRight">Octeon</a>
             </p>
           </div>
-          <div class="mastfoot">
+          <div class="mastfoot wow bounceInUp">
             <div class="inner">
               <p>Cover template copy-pasted from <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
