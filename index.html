@@ -11,9 +11,29 @@
     <script type="text/javascript">
       function easteregg() {
         document.querySelector(".mainthing").classList.add("egg")
-        document.querySelector(".doggo").classList.add("releasedadoggo")
+        document.querySelector(".doggo").classList.add("visible")
         document.querySelector(".site-wrapper").classList.add("dankcolors")
         alert('You found easter egg!');
+      }
+      function closemainthings() {
+        $('#firstpage').addClass('animated flipOutY invisible');
+      }
+      function openmainthings() {
+        console.log('Opening main page')
+        $('#firstpage').removeClass('flipOutY invisible');
+        $('#firstpage').addClass('animated flipInY');
+        $('.infopened').removeClass('infopened infclosing visible animated');
+      }
+      function closeinfo() {
+        $('.infopened').removeClass('flipInY');
+        $('.infopened').addClass('infclosing');
+        $('.infopened').addClass('animated flipOutY');
+        openmainthings();
+      }
+      function openinfo(thing) {
+        closemainthings();
+        $('#' + thing).removeClass('animated flipOutY')
+        $('#' + thing).addClass('animated flipInY visible infopened');
       }
     </script>
     <link href="css/cover.css" rel="stylesheet">
@@ -23,7 +43,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style type="text/css">
       html, body {margin: 0; height: 100%; overflow: hidden}
-      .fa {
+      .linkfa {
         color: black !important;
         width: 60px;
       }
@@ -70,25 +90,54 @@
     <div class="site-wrapper" style="background-color:#292b2c">
       <div class="site-wrapper-inner">
         <div class="cover-container" style="color: #fff">
-          <div class="inner cover">
+          <div class="inner cover" id="firstpage">
             <h1 class="cover-heading wow fadeInDown">OctoNezd</h1>
             <hr class="wow slideInLeft">
             <p class="lead">
-              <a class="link btn btn-secondary wow slideInLeft" href="http://t.me/octonezd"><i class="fa fa-3x fa-telegram fa-fw" aria-hidden="true"></i></a>
-              <a class="link btn btn-secondary wow slideInRight" href="http://github.com/octonezd"><i class="fa fa-3x fa-github fa-fw" aria-hidden="true"></i></a>
+              <a class="link btn btn-secondary wow slideInLeft" href="http://t.me/octonezd"><i class="fa linkfa fa-3x fa-telegram fa-fw" aria-hidden="true"></i></a>
+              <a class="link btn btn-secondary wow slideInRight" href="http://github.com/octonezd"><i class="fa linkfa fa-3x fa-github fa-fw" aria-hidden="true"></i></a>
             </p>
             <hr class="wow slideInRight">
             <p class="lead">
             Best things which I made:<br>
-            <a href="https://ntrdb.octonezd.pw" class="btn wow slideInLeft">NTRDB</a>
-            <a href="https://github.com/OctoNezd/ASFWeb" class="btn wow slideInUp">ASFWeb</a>
-            <a href="https://github.com/OctoNezd/Octeon" class="btn wow slideInRight">Octeon</a>
+            <a href="#" onclick="openinfo('NTRDB');" class="btn wow slideInLeft">NTRDB</a>
+            <a href="#" onclick="openinfo('ASFWeb');" class="btn wow slideInUp">ASFWeb</a>
+            <a href="#" onclick="openinfo('Octeon');" class="btn wow slideInRight">Octeon</a>
             </p>
           </div>
           <div class="mastfoot wow bounceInUp">
             <div class="inner">
               <p>Cover template copy-pasted from <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
+          </div>
+          <div class="inner cover about" id="NTRDB" style="color:#fff; display: none;">
+            <h1 class="cover-heading wow fadeInDown">NTRDB</h1>
+            <h3>NTR Plugin database</h3>
+            <p>I made it when I were bored, and suddendly this grew up in a big project.</p>
+            <p>There is even wrappers for it! Take a look:
+            <br>
+            <a href="https://github.com/kade-robertson/NTRDB.NET">.NET Wrapper</a>
+            <br>
+            <a href="https://github.com/DiglidiDudeNG/node-ntrdb-api">Node.JS wrapper</a>
+            <br>
+            </p>
+            <a href="http://ntrdb.octonezd.pw" class="btn btn-block btn-primary"><i class="fa fa-fw fa-link" aria-hidden="true"></i>NTRDB itself</a>
+            <a href="http://github.com/octonezd/ntrdb" class="btn btn-block btn-success"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a>
+            <a href="#" onclick="closeinfo();" class="btn btn-block btn-secondary">Return to main page</a>
+          </div>
+          <div class="inner cover about" id="ASFWeb" style="color:#fff; display: none;">
+            <h1 class="cover-heading wow fadeInDown">ASFWeb</h1>
+            <h3>ASF stats on web page.</h3>
+            <a href="http://github.com/octonezd/asfweb" class="btn btn-block btn-success"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a>
+            <a href="#" onclick="closeinfo();" class="btn btn-block btn-secondary">Return to main page</a>
+          </div>
+          <div class="inner cover about" id="Octeon" style="color:#fff; display: none;">
+            <h1 class="cover-heading wow fadeInDown">Octeon</h1>
+            <h3>Modular telegram bot.</h3>
+            <p>I not actively developing this, but the bot itself is nice! <br>It has features useful for chats and <a style="font-family: consolas">m e m e s</a></p>
+            <a href="http://t.me/octeon_bot" class="btn btn-block btn-info"><i class="fa fa-fw fa-telegram" aria-hidden="true"></i>Contact @octeon_bot on telegram</a>
+            <a href="http://github.com/octonezd/octeon" class="btn btn-block btn-success"><i class="fa fa-fw fa-github" aria-hidden="true"></i>GitHub</a>
+            <a href="#" onclick="closeinfo();" class="btn btn-block btn-secondary">Return to main page</a>
           </div>
         </div>
       </div>

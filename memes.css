@@ -6,8 +6,11 @@
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
 }
-.releasedadoggo {
+.visible {
 	display: block !important;
+}
+.invisible {
+	display: none !important;
 }
 @keyframes danktrips {
     from {background-color: red;}
