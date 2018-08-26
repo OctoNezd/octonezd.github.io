@@ -1,0 +1,18 @@
+.egg {
+	font-family: 'Comic Sans MS' !important;
+}
+.dankcolors {
+    animation-name: danktrips;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.visible {
+	display: block !important;
+}
+.invisible {
+	display: none !important;
+}
+@keyframes danktrips {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
