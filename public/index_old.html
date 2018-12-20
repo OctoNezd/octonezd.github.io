@@ -1,137 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="OctoNezd's home page">
-    <meta name="author" content="OctoNezd">
-    <title>OctoNezd's home page</title>
-    <script type="text/javascript">
-      function easteregg() {
-        document.querySelector(".mainthing").classList.add("egg")
-        document.querySelector(".doggo").classList.add("visible")
-        document.querySelector(".site-wrapper").classList.add("dankcolors")
-        alert('You found easter egg!');
-      }
-      function closemainthings() {
-        $('#firstpage').addClass('animated flipOutY invisible');
-      }
-      function openmainthings() {
-        console.log('Opening main page')
-        $('#firstpage').removeClass('flipOutY invisible');
-        $('#firstpage').addClass('animated flipInY');
-        $('.infopened').removeClass('infopened infclosing visible animated');
-      }
-      function closeinfo() {
-        $('.infopened').removeClass('flipInY');
-        $('.infopened').addClass('infclosing');
-        $('.infopened').addClass('animated flipOutY');
-        openmainthings();
-      }
-      function openinfo(thing) {
-        closemainthings();
-        $('#' + thing).removeClass('animated flipOutY')
-        $('#' + thing).addClass('animated flipInY visible infopened');
-      }
-    </script>
-    <link href="css/cover.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="memes.css">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <style type="text/css">
-      
-      .linkfa {
-        color: white !important;
-        width: 60px;
-        height: 60px;
-      }
-      .link {
-        padding: 5px
-      }
-      .lead {
-        padding: 1px;
-      }
-      hr {
-        background-color: white;
-      }
-      .btn {
-        border-radius: 0;
-        padding: 1px;
-        margin: 0;
-        font-size: inherit;
-      }
-      .doggo {
-        display: none;
-        position: absolute;
-        animation-name: doge;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-      }
-      @keyframes doge {
-          0%   {left:-20%; top:0px;transform: rotate(45deg);}
-          25%  {left:80%; top:0px;transform: rotate(90deg);}
-          50%  {left:80%; top:80%;transform: scaleX(-1) rotate(45deg);}
-          75%  {left:0px; top:80%;transform: scaleX(-1) rotate(-90deg);}
-          100% {left:0px; top:0px;}
-      }
-      @media (min-width: 575px) {
-        html, body {margin: 0; height: 100%; overflow: hidden}
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <script src="js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-  </head>
-  <div class="doggo">
-  <img src="http://i.imgur.com/MrxY7vu.png">
-  </div>
-  <body class="mainthing">
-    <div class="site-wrapper" style="background-color:#292b2c">
-      <div class="site-wrapper-inner">
-        <div class="cover-container" style="color: #fff">
-          <div class="inner cover" id="firstpage">
-            <h1 class="cover-heading wow fadeInDown">OctoNezd</h1>
-            <hr class="wow slideInLeft">
-            <p class="lead">
-              <a class="link wow slideInLeft linkfa" href="http://t.me/octonezd"><i class="fab fa-3x fa-telegram-plane fa-fw" aria-hidden="true"></i></a>
-              <a class="link wow slideInRight linkfa" href="http://gitlab.com/octonezd"><i class="fab fa-3x fa-gitlab fa-fw" aria-hidden="true"></i></a>
-            </p>
-            <hr class="wow slideInRight">
-            <p class="lead">
-            <a href="#" onclick="openinfo('Aigis');" class="btn wow slideInRight">My Telegram Bot: Aigis</a>
-            </p>
-          </div>
-          <div class="inner cover about" id="Aigis" style="color:#fff; display: none;">
-            <h1 class="cover-heading wow fadeInDown">Aigis/OctoBot</h1>
-            <h3>Multipurpose Telegram bot.</h3>
-            <p>The thing I am working for months. It all started as bot with some stuff for 3DS Homebrew, but I realised that noone needs stuff like that, so it become multipurpose Telegram bot</p>
-            <a href="http://t.me/aigis_bot" class="btn btn-block btn-info"><i class="fab fa-fw fa-telegram" aria-hidden="true"></i>Contact @aigis_bot on telegram</a>
-            <a href="http://github.com/octonezd/octobot" class="btn btn-block btn-success"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i>GitLab</a>
-            <a href="http://aigis_bot.gitlab.io" class="btn btn-block btn-success"><i class="fas fa-fw fa-external-link-alt" aria-hidden="true"></i>Bot's site with commands</a>
-            <a href="#" onclick="closeinfo();" class="btn btn-block btn-secondary">Return to main page</a>
-          </div>
-          <div class="mastfoot wow bounceInUp">
-          <div class="inner">
-          <p>Cover template copy-pasted from <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+<html>
+    <head>
+        <title>OctoNezd's personal website</title>
+        <meta name="yandex-verification" content="27b3988a7599dcf6" />
+        <meta charset="utf-8"/>
+        <meta property="og:title" content="OctoNezd's personal website" />
+        <meta property="og:description" content="OctoNezd's personal website. Nuff said." />
+        <meta name="description" content="OctoNezd's personal website. Nuff said." />
+        <link rel="shortcut icon" href="http://octonezd.me/favicon.png" type="image/png" />
+        <link rel="icon" type="image/png" href="http://octonezd.me/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="main">
+                <center>
+                    <h1>OctoNezd's personal website</h1>
+                    <h5 style="color: grey">It is not outdated, it's oldschool!</h5>
+                </center>
+                <div id="internal">
+                    Oh, hello there!
+                    <br>
+                    Welcome to my amazing website done in 2004-kinda style
+                    <a style="color: grey; font-size: 10pt">althrough my knowledge of CSS is much worse then 2004</a>
+                    <br>
+                    This site is 99% js-free and only js here is age calculator which is only 591 bytes long
+                    <br>
+                    Umm where to begin here... Oh right, about me.
+                    <h2>About me</h2>
+                    My name is Yan, I am <a id="age">if you see this then turn js i am too lazy to put my age here manually</a> years old, born on 14th june of 2001 in Russia, I am studying Computer Networking in probably worst of all colleges with stupid rules which I won't mention cause <a style="font-family: monospace;">A N O N Y M I T Y</a> and sometimes I do random things with python
+                    <h2>Random things I did</h2>
+                    <ul>
+                        <li>Telegram bots: 
+                            <ul>
+                                <li><a href="https://t.me/aigis_bot">aigis_bot</a> - yet another telegram bot with random features and bugs</li>
+                                <li><a href="https://t.me/theonlyokaymariebot">theonlyokaymariebot</a> - telegram bot for administrating android device chats</li>
+                            </ul>
+                        </li>
+                        <li>Cool and useful tools:
+                            <ul>
+                                <li><a href="https://github.com/octonezd/requestscomposer">Requests Composer</a></li>
+                                <li><a href="https://gitlab.com/OctoNezd/loggui">LogGui</a> - GUI for python logging library</li>
+                                <li><a href="https://gitlab.com/OctoNezd/cool-and-good-adb-installer">cool-and-good-adb-installer</a></li>
+                            </ul>
+                        </li>
+                        <li>Libraries:
+                            <ul>
+                                <li><a href="https://gitlab.com/OctoNezd/autogram">Autogram</a> - telegram library that builds itself</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h2>Contact me!  <a style="color: grey; font-size: 10pt">please i am lonely as hell and need girlfriend instead of starring at pics with some anime robot girl</a></h2>
+                    <ul>
+                        <li>email: me@octonezd.me</li>
+                        <li>telegram: <a href="https://t.me/octonezd">@octonezd</a></li>
+                        <li>steam: <a href="https://steamcommunity.com/id/octonezd">enokto</a></li>
+                        <li>gitlab: <a href="https://gitlab.com/octonezd">octonezd</a></li>
+                        <li>that's all i guess</li>
+                    </ul>
+                    <h2><a style="font-family: monospace;">c o o l</a> badges</h2>
+                    <a href="https://www.mozilla.org/firefox/this-browser-comes-highly-recommended/?utm_source=devs-for.firefox.com&utm_medium=referral&utm_campaign=devs-for-firefox&utm_content=I-put-old-as-hell-badge-on-my-website-lol"><img border="0" alt="Get Firefox!" title="Get Firefox!" src="https://web.archive.org/web/20041011075030im_/http://www.spreadfirefox.com/community/images/affiliates/Buttons/110x32/trust.gif"/></a>
+                    <a title="I Use Firefox"
+                       rel="nofollow"
+                       href="https://www.mozilla.org/firefox/this-browser-comes-highly-recommended/?utm_source=devs-for.firefox.com&utm_medium=referral&utm_campaign=devs-for-firefox&utm_content=I-Use-Firefox">
+                      <img style="border:0 none; width: 5%"
+                           alt="I Use Firefox"
+                           srcset="//code.cdn.mozilla.net/for-firefox/badges/assets/I-Use-Firefox.png"
+                           src="//code.cdn.mozilla.net/for-firefox/badges/assets/I-Use-Firefox.png">
+                    </a>
+                </p>
+            </div> 
         </div>
-        </div>      
-
-      </div>
-      </div>
-
-      <button class="btn btn-block" href="#" onclick="easteregg();" style="height: 10%; background: transparent;"></button>
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
-  </body>
+        <script type="text/javascript">
+            function getAge(dateString) {
+                var today = new Date();
+                var birthDate = new Date(Date.parse(dateString));
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                return age;
+            }            
+            document.getElementById("age").innerHTML = getAge("14 june 2001")
+        </script>
+        <script type="text/javascript" src="js/egg.js"></script>
+    </body>
 </html>
