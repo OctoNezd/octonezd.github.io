@@ -31,3 +31,5 @@ minima:
   social_links:
     github: octonezd
     telegram: mrvn4
+
+include: [CNAME] 
