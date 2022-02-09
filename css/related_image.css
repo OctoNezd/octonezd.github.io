@@ -20,9 +20,8 @@
   width: 100%;
   flex-grow: 0;
 }
-.post-item {
+.post-item, .excerpt {
   padding: 10px;
-  padding-right: 15px; 
 }
 .post-item h3 {
   margin-bottom: 0;

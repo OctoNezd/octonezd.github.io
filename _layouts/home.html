@@ -14,8 +14,13 @@ layout: default
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
     <li>
-      {%- include post.html -%}
-      {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+      {%- include post.html -%} {%- if site.show_excerpts -%}
+      <div class="excerpt">
+        {{ post.excerpt }}
+        <a href="{{ post.url | relative_url }}">➡Full article</a>
+        <br />
+      </div>
+      {%- endif -%}
     </li>
     {%- endfor -%}
   </ul>

@@ -1,5 +1,7 @@
 title: Octo's rants
 email: me@octonezd.me
+show_excerpts: true
+excerpt_separator: <!--more-->
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://octonezd.me" # the base hostname & protocol for your site, e.g. http://example.com

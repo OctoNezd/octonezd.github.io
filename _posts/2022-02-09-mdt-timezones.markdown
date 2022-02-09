@@ -4,14 +4,14 @@ title:  "MDT and time zones"
 date:   2022-02-09 00:00:00 +0000
 categories: mdt
 tags: mdt timezone
-related_image: /img/mdt-tz-hero.png
+image: /img/mdt-tz-hero.png
 solution: 1
 ---
 
 Almost every post/tutorial on setting default timezone in MDT says to use value from `tzutil /g`.
 
 In addition to that, [MDT documentation on TimeZoneName](https://docs.microsoft.com/en-us/mem/configmgr/mdt/toolkit-reference#TimeZoneName) specifies to use value for Unattend.xml, [which references to `tzutil` yet again](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-timezone). So it should work, right? Right?
-
+<!--more-->
 <div class="tenor-gif-embed" data-postid="14085168" data-share-method="host" data-aspect-ratio="1.73" data-width="100%"></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 After trying it out for myself, I got the "Russian Standard Time", which didn't work in MDT and gave me PT instead:
