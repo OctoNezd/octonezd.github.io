@@ -1,0 +1,33 @@
+title: Octo's rants
+email: me@octonezd.me
+description: ""
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://octonezd.me" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: octonezd
+author:
+  name: Octo
+  email: me@octonezd.me
+
+things:
+  - name: Webapp for batch software install
+    link: https://ic.octonezd.me
+  - name: Telegram bot
+    link: https://t.me/aigis_bot
+
+header_pages:
+  - category/mdt.md
+  - category/android.md
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# theme settings 
+minima:
+  skin: dark
+  date_format: "%b %-d, %Y"
+  social_links:
+    github: octonezd
+    telegram: mrvn4
