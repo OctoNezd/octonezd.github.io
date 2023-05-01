@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "MDT and time zones"
-date:   2022-02-09 00:00:00 +0000
+title: "MDT and time zones"
+date: 2022-02-09 00:00:00 +0000
 categories: mdt
 tags: mdt timezone
 image: /img/mdt-tz-hero.png
@@ -11,6 +11,7 @@ solution: 1
 Almost every post/tutorial on setting default timezone in MDT says to use value from `tzutil /g`.
 
 In addition to that, [MDT documentation on TimeZoneName](https://docs.microsoft.com/en-us/mem/configmgr/mdt/toolkit-reference#TimeZoneName) specifies to use value for Unattend.xml, [which references to `tzutil` yet again](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-timezone). So it should work, right? Right?
+
 <!--more-->
 <div class="tenor-gif-embed" data-postid="14085168" data-share-method="host" data-aspect-ratio="1.73" data-width="100%"></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
@@ -118,7 +119,7 @@ Where:
 <option value="Kamchatka Standard Time">(UTC+12:00) Petropavlovsk-Kamchatsky - Old</option>
 <option value="Tonga Standard Time">(UTC+13:00) Nuku'alofa</option>
 <option value="Samoa Standard Time">(UTC+13:00) Samoa</option>
-<option value="Line Islands Standard Time">(UTC+14:00) Kiritimati Island</option>			  
+<option value="Line Islands Standard Time">(UTC+14:00) Kiritimati Island</option>
 <option value="Dateline Standard Time">(UTC-12:00) International Date Line West</option>
 <option value="UTC-11">(UTC-11:00) Coordinated Universal Time-11</option>
 <option value="Hawaiian Standard Time">(UTC-10:00) Hawaii</option>
