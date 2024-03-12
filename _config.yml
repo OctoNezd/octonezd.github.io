@@ -13,8 +13,8 @@ author:
 things:
   - name: Webapp for batch software install
     link: https://ic.octonezd.me
-  - name: Telegram bot
-    link: https://t.me/aigis_bot
+  - name: Extension to make old reddit mobile-friendly
+    link: https://addons.mozilla.org/en-US/firefox/addon/oldlander/
 
 header_pages:
   - category/mdt.md
