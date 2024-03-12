@@ -1,0 +1,32 @@
+.related_img {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+  object-fit: cover;
+  filter: opacity(50%);
+}
+.related_img .child {
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  flex-grow: 0;
+}
+.post-item, .excerpt {
+  padding: 10px;
+}
+.post-item h3 {
+  margin-bottom: 0;
+}
+/* Fix for navbar being broken on mobiles when next to image */
+.site-nav {
+  z-index: 999;
+}
