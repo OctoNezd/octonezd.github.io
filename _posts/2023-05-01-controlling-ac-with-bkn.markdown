@@ -1,10 +1,71 @@
 ---
 layout: post
-title: "Controlling Coolix-compatible AC using OpenBeken/OpenBK7231T-Compatible IR Blaster"
+title: "Controlling Coolix-compatible AC using BK7231 IR blaster using ESPHome (or OpenBeken/OpenBK7231T and AppDaemon)"
 date: 2022-02-09 00:00:00 +0000
 categories: mdt
 tags: iot infrared ac homeassistant mqtt openbeken openbk7231t
 ---
+
+**2026 UPDATE**: ESPHome got support for these blasters. Here is my config, for the whole thing:
+
+```yaml
+# Board: Tuya Generic IRC03 IR Blaster
+# Definition: definitions/boards/tuya_generic_irc03_ir_blaster/manifest.yaml
+
+esphome:
+  name: ir
+  friendly_name: ir
+
+bk72xx:
+  board: generic-bk7231n-qfn32-tuya
+
+logger:
+
+captive_portal:
+
+output:
+  - platform: libretiny_pwm
+    id: led
+    pin: 24
+
+light:
+  - platform: monochromatic
+    name: LED
+    id: light_monochromatic_1
+    output: led
+
+binary_sensor:
+  - platform: gpio
+    name: btn
+    id: btn
+    pin:
+      inverted: true
+      mode:
+        input: true
+        pullup: true
+      number: 9
+
+remote_transmitter:
+  pin: 7
+  carrier_duty_percent: 50%
+
+remote_receiver:
+  pin:
+    number: 8
+    inverted: true
+    mode:
+      input: true
+      pullup: true
+  tolerance: 55%
+
+climate:
+- platform: coolix
+  name: "AC"
+```
+
+Pretty easy, eh? Works great for me. Here is old article, for you if you want to go through AppDaemon and my horrible 3-year old code I hacked together.
+
+# I want to suffer, give me AppDaemon code
 
 A lot of new cheap chinese IoT-thingies come with custom Tuya ESP pin-compatible boards, which are incompatible with ESPHome or Tasmota, but compatible with [OpenBeken](https://github.com/openshwprojects/OpenBK7231T_App).
 
